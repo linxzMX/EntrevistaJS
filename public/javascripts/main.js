@@ -90,9 +90,7 @@ Object.defineProperty(User.prototype,'data',{
         userContainer.innerHTML=usersTemplate;
     };
     function removeUser(e,id){
-        var index=data.users.findIndex(user=>user.data.id===id);
-        if(index===-1)return;
-        data.users.splice(index,1);
+        alert('removeUser '+id);
     };
     function createUser(params){
         var params=params || {
