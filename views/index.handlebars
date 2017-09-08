@@ -1,0 +1,68 @@
+
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+    <h1>Usuarios</h1>
+
+
+    <h2>Listado de Usuarios</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        # 
+                        <button type="button" onclick="$(window).trigger('sorting',['id'])" class="px-1 py-0 btn btn-default">
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </th>
+                    <th>
+                        Nombre
+                        <button type="button" onclick="$(window).trigger('sorting',['name'])" class="px-1 py-0 btn btn-default">
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </th>
+                    <th>
+                        Email
+                        <button type="button" onclick="$(window).trigger('sorting',['email'])" class="px-1 py-0 btn btn-default">
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </th>
+                    <th>
+                        Teléfono
+                        <button type="button" onclick="$(window).trigger('sorting',['phone'])" class="px-1 py-0 btn btn-default">
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="userContainer"></tbody>
+        </table>
+    </div>
+</main>
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>Posts</h2>
+                <div id="postContainer" class="container" style="height:400px; overflow-y:auto;">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="/javascripts/main.js"></script>
